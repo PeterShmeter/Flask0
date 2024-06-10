@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>О которых ты мне нихурена не рассказывал</title>
+    <style>
+        textarea {
+            resize:none
+        }
+        .chat-window {
+            overflow: scroll;
+            border: 1px solid black;
+            width: 50em;
+            height: 48em;
+        }
+    </style>
+</head>
+<body>
+    <div class='chat-window' id="chat-window" contenteditable="true">{{ special }}</div>
+    <br>
+    <div>
+        <form name="simple_form" method="post" action="/" enctype="multipart/form-data">
+            <input type="text" name="form-name" value="main" hidden>
+            <input type="text" id="message" name="message" style="width: 50em">
+            <input type="submit"><br><br>
+            <input type="file" name="attachment"><br><br>
+    <!--        <textarea cols="50" rows="10" disabled>{{special}}</textarea>-->
+    <!--        <div contenteditable="true" style="border: 1px solid black">-->
+    <!--            <b style="color:blue">Username</b><br>-->
+    <!--            asdfkljklgaklagklj;-->
+    <!--        </div>-->
+    <!--        {{ templ2 }}-->
+        </form>
+    </div>
+    <input type="button" id="renew" value="renew the page">
+<!--    <div>-->
+<!--        <form name="form2" method="post">-->
+<!--            Abvgd-->
+<!--            <input type="text" name="form-name" value="form2" hidden>-->
+<!--            <input type="submit" value="file.txt">-->
+<!--        </form>-->
+<!--    </div>-->
+    <script type="text/javascript" id="submitAsPost">
+        function someFunction() {
+            location.reload()
+//            document.getElementById("chat-window").value = 'Allright!Allright!Allright!';
+//            document.getElementById("message").value = 'Allright!Allright!Allright!';
+        }
+        document.getElementById('renew').onclick = someFunction;
+//        document.getElementById("renew").onclick = function(){
+//          alert("Button Clicked");
+//        }
+    </script>
+
+</body>
+</html>
